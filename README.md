@@ -1,1 +1,3 @@
-# separable-3D-convs-for-stereo-matching
+# SEPARABLE CONVOLUTIONS FOR OPTIMIZING 3D STEREO NETWORKS
+
+To be updated soon...
