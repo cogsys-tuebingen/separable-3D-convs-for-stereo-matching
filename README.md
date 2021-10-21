@@ -1,4 +1,4 @@
-# SEPARABLE CONVOLUTIONS FOR OPTIMIZING 3D STEREO NETWORKS
+# Separable Convolutions for Optimizing 3D Stereo Networks
 
 This repo contains the code
 for "[Separable Convolutions for Optimizing 3D Stereo Networks](https://ieeexplore.ieee.org/document/9506330)" paper (IEEE ICIP 2021) by [Rafia Rahim](https://www.linkedin.com/in/rafiarahim/), Faranak Shamsafar and Andreas
