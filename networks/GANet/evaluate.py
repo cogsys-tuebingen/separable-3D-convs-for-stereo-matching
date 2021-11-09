@@ -82,26 +82,26 @@ if opt.resume:
         print("=> no checkpoint found at '{}'".format(opt.resume))
 
 
-ndict={}
-for k,val in checkpoint['state_dict'].items():
-    if "depth_wise" in k :
-        old_key=k.rsplit("depth_wise")
-        prefix=old_key[0]
-        postfix=old_key[1]
-        print(old_key,prefix+f"conv.depth_wise"+postfix)
-        ndict[prefix+f"conv.depth_wise"+postfix]=val
-    elif "point_wise" in k :
-        old_key=k.rsplit("point_wise")
-        prefix=old_key[0]
-        postfix=old_key[1]
-        print(old_key,prefix+f"conv.point_wise"+postfix)
-        ndict[prefix+f"conv.point_wise"+postfix]=val
-    else:
-        ndict[k]=val
-
-ncheckpoint=checkpoint
-ncheckpoint['state_dict']=ndict
-torch.save(ncheckpoint,"updated_3DSeperable_GANet11_Sceneflow_epoch_20.pth")
+# ndict={}
+# for k,val in checkpoint['state_dict'].items():
+#     if "depth_wise" in k :
+#         old_key=k.rsplit("depth_wise")
+#         prefix=old_key[0]
+#         postfix=old_key[1]
+#         print(old_key,prefix+f"conv.depth_wise"+postfix)
+#         ndict[prefix+f"conv.depth_wise"+postfix]=val
+#     elif "point_wise" in k :
+#         old_key=k.rsplit("point_wise")
+#         prefix=old_key[0]
+#         postfix=old_key[1]
+#         print(old_key,prefix+f"conv.point_wise"+postfix)
+#         ndict[prefix+f"conv.point_wise"+postfix]=val
+#     else:
+#         ndict[k]=val
+#
+# ncheckpoint=checkpoint
+# ncheckpoint['state_dict']=ndict
+# torch.save(ncheckpoint,"updated_3DSeperable_GANet11_Sceneflow_epoch_20.pth")
 
 def readPFM(file):
     with open(file, "rb") as f:
